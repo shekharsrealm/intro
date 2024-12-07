@@ -11,14 +11,14 @@ const rightButton = document.querySelector('.slider-btn.right');
 
 leftButton.addEventListener('click', () => {
   slider.scrollBy({
-    left: -200, // Adjust scroll distance
+    left: -400, // Adjust scroll distance
     behavior: 'smooth'
   });
 });
 
 rightButton.addEventListener('click', () => {
   slider.scrollBy({
-    left: 200, // Adjust scroll distance
+    left: 400, // Adjust scroll distance
     behavior: 'smooth'
   });
 });
