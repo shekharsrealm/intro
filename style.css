@@ -150,7 +150,6 @@ a:hover {
 
 section {
   padding-top: 4vh;
-  height: 110vh;
   margin: 0 10rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -452,3 +451,206 @@ footer p {
 .table-cell {
   display: table-cell;
 }
+
+/* Slider Container */
+.slider-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 2rem auto;
+  max-width: 90%;
+  /* Adjust width as needed */
+}
+
+/* Slider */
+.slider {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for a cleaner look */
+}
+
+/* Cards */
+.tech-card {
+  max-width: 200px;
+  flex: 0 0 auto;
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 1rem;
+}
+
+.tech-info h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.tech-info p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent background */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  /* Circular shape */
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  /* Slight shadow for depth */
+}
+
+.slider-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  /* Darker background on hover */
+  transform: translateY(-50%) scale(1.1);
+  /* Slightly enlarge on hover */
+}
+
+.slider-btn:active {
+  background: rgba(0, 0, 0, 1);
+  /* Fully opaque when clicked */
+  transform: translateY(-50%) scale(0.95);
+  /* Shrink slightly on click */
+}
+
+.slider-btn.left {
+  left: 15px;
+  /* Adjust distance from the left edge */
+}
+
+.slider-btn.right {
+  right: 15px;
+  /* Adjust distance from the right edge */
+}
+
+/* Arrow Icon Inside Button */
+.slider-btn::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(135deg);
+  /* Default rotation for the right arrow */
+}
+
+.slider-btn.left::before {
+  transform: rotate(-45deg);
+  /* Flip arrow for the left button */
+}
+
+/* Projects Section */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+}
+
+.project-details {
+  padding: 1rem;
+  text-align: center;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.project-tech {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.tech-badge {
+  background: #e0e0e0;
+  color: #333;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.project-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.project-btn:hover {
+  background: #388e3c;
+}
+
