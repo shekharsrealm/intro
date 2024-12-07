@@ -159,6 +159,11 @@ section {
   display: flex;
 }
 
+.profile-pic {
+  border-radius: 50%;
+  filter: grayscale(100%);
+}
+
 /* PROFILE SECTION */
 
 #profile {
@@ -655,4 +660,64 @@ footer p {
 
 .align-center {
   text-align: center;
+}
+
+/* Silky Iridescent Cloth */
+.paper-card {
+  background: linear-gradient(135deg, #ffffff, #dcdcdc, #a0a0a0, #ffffff);
+  background-size: 300% 300%;
+  /* Enlarged for smooth animation */
+  animation: silky-waves 6s ease-in-out infinite;
+  /* Wave-like movement */
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  /* Smooth rounded edges */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+}
+
+/* Overlay for Highlight and Texture */
+.paper-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0) 60%);
+  opacity: 0.4;
+  mix-blend-mode: overlay;
+  /* Enhance the shiny, iridescent effect */
+  pointer-events: none;
+  animation: light-shimmer 8s linear infinite;
+  /* Subtle shimmer */
+}
+
+/* Silky Wave Animation */
+@keyframes silky-waves {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Shimmer Animation */
+@keyframes light-shimmer {
+  0% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  50% {
+    transform: translate(0%, 0%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
 }
